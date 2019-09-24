@@ -8,15 +8,14 @@ Write a program that reads these two files, orders.csv and barcodes.csv, and gen
 
 *customer_id, order_id1, [barcode1, barcode2, ...] customer_id, order_id2, [barcode1, barcode2, ...]*
 
-##Bonus points :
-● We want to have the top 5 customers that bought the most amount of tickets.
+## Bonus points:
+1. We want to have the top 5 customers that bought the most amount of tickets.
 The script should print (to stdout) the top 5 customers of the dataset. Each line should be in the following format:
 customer_id, amount_of_tickets
-● Print the amount of unused barcodes (barcodes left).
-● Model how you would store this in a SQL database (e.g. UML, data model with
+2. Print the amount of unused barcodes (barcodes left).
+3. Model how you would store this in a SQL database (e.g. UML, data model with
 relations and optionally indexes)
-Input files:
-Two files in comma separated formatting.
+Input files: Two files in comma separated formatting.
 orders.csv
 order_id, customer_id
 This contains a list of orders. order_id is unique.
