@@ -8,7 +8,7 @@ Write a program that reads these two files, orders.csv and barcodes.csv, and gen
 
 *customer_id, order_id1, [barcode1, barcode2, ...] customer_id, order_id2, [barcode1, barcode2, ...]*
 
-##Bonus points:
+##Bonus points :
 ● We want to have the top 5 customers that bought the most amount of tickets.
 The script should print (to stdout) the top 5 customers of the dataset. Each line should be in the following format:
 customer_id, amount_of_tickets
