@@ -26,6 +26,8 @@ def test_validate_barcodes():
     res, conn = executeQuery("select count(barcode) from barcodes")
     all_num_after = res[0][0]
 
+    dupe_num = (dupe_num / 2) # delete one of duplicate
+
     assert all_num_after == all_num - dupe_num
 
     res, conn = executeQuery(
@@ -43,10 +45,6 @@ def test_get_customer_to_order():
     assert len([barcodes for cust, order, barcodes in data if barcodes == ""]) == 0
 
 def test_get_top_customers():
-    res, conn = executeQuery("select o.customer_id, count(b.barcode) from orders o, barcodes b "
-                             "where b.order_id = o.order_id "
-                             "group by o.customer_id "
-                             "order by count(b.barcode) desc")
     expeced_top_5 = set()
     expeced_top_5.update(['10', '56', '29', '60', '59'])
     result_top_5 = set()

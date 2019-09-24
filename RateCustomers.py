@@ -51,13 +51,14 @@ def validate_barcodes():
     # validate no duplicate bar codes
 
     dic, conn = executeQuery("Select count(barcode), barcode from barcodes group by barcode having count(barcode) > 1")
-
+    conn.close()
     if dic is not None:
         print("Deleting duplicate barcodes found for: " + ", ".join(str(v) for k, v in dic), file=sys.stderr)
 
+        #duplicates have no order_id
         executeNonQuery("delete from barcodes where barcode in"
                         "(select barcode from(Select count(barcode),barcode from barcodes "
-                        "group by barcode having count(barcode) > 1))")
+                        "group by barcode having count(barcode) > 1)) and order_id = ''")
 
 def validate_orders():
     # validate no order without bar code
@@ -87,6 +88,7 @@ def write_to_csv(data):
         f.close()
 
 def get_top_five():
+    #Assumption: The best customer is the one who has bought the most barcodes
     res, conn = executeQuery("select o.customer_id, count(b.barcode) from orders o, barcodes b "
                  "where b.order_id = o.order_id "
                  "group by o.customer_id "
