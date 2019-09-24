@@ -15,18 +15,15 @@ customer_id, amount_of_tickets
 2. Print the amount of unused barcodes (barcodes left).
 3. Model how you would store this in a SQL database (e.g. UML, data model with
 relations and optionally indexes)
-Input files: Two files in comma separated formatting.
-orders.csv
-order_id, customer_id
-This contains a list of orders. order_id is unique.
-barcodes.csv
-barcode, order_id
-The barcodes in our system. If a barcode has been sold, it’s assigned to an order using order_id, otherwise order_id is empty.
-Validation:
+## Input files:
+Two files in comma separated formatting. 
+1. orders.csv (order_id, customer_id) This contains a list of orders. order_id is unique.
+2. barcodes.csv (barcode, order_id) The barcodes in our system. If a barcode has been sold, it’s assigned to an order using order_id, otherwise order_id is empty.
+## Validation:
 Make sure the input is validated correctly:
-● No duplicate barcodes
-● No orders without barcodes
+1. No duplicate barcodes
+2. No orders without barcodes
 Items which failed the validation should be logged (e.g. stderr) and ignored for the output.
-Requirements:
-● Write your solution in Python
-● Deliver solution using GIT or zip-file.
+## Requirements:
+* Write your solution in Python
+* Deliver solution using GIT or zip-file.
