@@ -1,11 +1,14 @@
 # TiqetsAssignment
 
-Assignment
+## Assignment
 We have exported 2 datasets from our system, one contains orders from customers and another contains barcodes (with an order_id if they are sold).
+
 To print the Tiqets vouchers we need a csv file with all the barcodes and orders_ids per customer.
 Write a program that reads these two files, orders.csv and barcodes.csv, and generates an output file that contains the following data:
-customer_id, order_id1, [barcode1, barcode2, ...] customer_id, order_id2, [barcode1, barcode2, ...]
-Bonus points:
+
+*customer_id, order_id1, [barcode1, barcode2, ...] customer_id, order_id2, [barcode1, barcode2, ...]*
+
+##Bonus points:
 ● We want to have the top 5 customers that bought the most amount of tickets.
 The script should print (to stdout) the top 5 customers of the dataset. Each line should be in the following format:
 customer_id, amount_of_tickets
