@@ -9,20 +9,20 @@ Write a program that reads these two files, orders.csv and barcodes.csv, and gen
 *customer_id, order_id1, [barcode1, barcode2, ...] customer_id, order_id2, [barcode1, barcode2, ...]*
 
 ## Bonus points:
-1. We want to have the top 5 customers that bought the most amount of tickets.
+* We want to have the top 5 customers that bought the most amount of tickets.
 The script should print (to stdout) the top 5 customers of the dataset. Each line should be in the following format:
 customer_id, amount_of_tickets
-2. Print the amount of unused barcodes (barcodes left).
-3. Model how you would store this in a SQL database (e.g. UML, data model with
+* Print the amount of unused barcodes (barcodes left).
+* Model how you would store this in a SQL database (e.g. UML, data model with
 relations and optionally indexes)
 ## Input files:
 Two files in comma separated formatting. 
-1. orders.csv (order_id, customer_id) This contains a list of orders. order_id is unique.
-2. barcodes.csv (barcode, order_id) The barcodes in our system. If a barcode has been sold, it’s assigned to an order using order_id, otherwise order_id is empty.
+* orders.csv (order_id, customer_id) This contains a list of orders. order_id is unique.
+* barcodes.csv (barcode, order_id) The barcodes in our system. If a barcode has been sold, it’s assigned to an order using order_id, otherwise order_id is empty.
 ## Validation:
 Make sure the input is validated correctly:
-1. No duplicate barcodes
-2. No orders without barcodes
+* No duplicate barcodes
+* No orders without barcodes
 Items which failed the validation should be logged (e.g. stderr) and ignored for the output.
 ## Requirements:
 * Write your solution in Python
