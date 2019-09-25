@@ -1,8 +1,8 @@
 # TiqetsAssignment
 
 ## Solution
-RateCustomers.py contains the script to solve the challenge. In a larger program I would consider seperating out responsibilities into seperate classes. 
-RateCustomersTest.py contains a suite of tests for this script. TiqetsSchema.sql shows how I would set up this schema with appropriate constraints in an SQL database. SchemaRelation.PNG shows the resulting relations.
+*RateCustomers.py contains the script to solve the challenge. In a larger program I would consider seperating out responsibilities into seperate classes. 
+RateCustomersTest.py contains a suite of tests for this script. TiqetsSchema.sql shows how I would set up this schema with appropriate constraints in an SQL database. SchemaRelation.PNG shows the resulting relations.*
 
 ## Assignment
 We have exported 2 datasets from our system, one contains orders from customers and another contains barcodes (with an order_id if they are sold).
