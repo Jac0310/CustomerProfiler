@@ -106,8 +106,7 @@ def main():
     create_tables()
     validate_barcodes()
     validate_orders()
-    dataset = get_customer_to_order()
-    write_to_csv(dataset)
+    write_to_csv(get_customer_to_order())
     print("The top 5 customers are: " + ", ".join(get_top_five()))
     print("There are: " + str(get_unused_barcodes()) + " unused barcodes.")
 

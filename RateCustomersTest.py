@@ -1,8 +1,5 @@
 from RateCustomers import *
 
-import pytest
-
-
 def test_create_tables():
     create_tables()
     res, conn = executeQuery("select * from barcodes")
@@ -52,9 +49,6 @@ def test_get_top_customers():
     assert expeced_top_5 == result_top_5
 
 def test_get_unused_barcodes():
-    '''
-
-    '''
     res, conn = executeQuery("select * from barcodes")
 
     total_barcodes = len(res)
