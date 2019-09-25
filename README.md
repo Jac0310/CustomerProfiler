@@ -1,5 +1,7 @@
 # TiqetsAssignment
 
+## Solution
+
 ## Assignment
 We have exported 2 datasets from our system, one contains orders from customers and another contains barcodes (with an order_id if they are sold).
 
