@@ -1,6 +1,8 @@
 # TiqetsAssignment
 
 ## Solution
+RateCustomers.py contains the script to solve the challenge. 
+RateCustomersTest.py contains tests for each method
 
 ## Assignment
 We have exported 2 datasets from our system, one contains orders from customers and another contains barcodes (with an order_id if they are sold).
