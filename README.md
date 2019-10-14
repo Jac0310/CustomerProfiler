@@ -1,4 +1,4 @@
-# TiqetsAssignment
+# CustomerProfiler
 
 ## Solution
 *RateCustomers.py contains the script to solve the challenge. In a larger program I would consider seperating out responsibilities into seperate classes. 
